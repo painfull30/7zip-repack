@@ -12,9 +12,16 @@ export ARCPARAMS=-t7z -m0=lzma2 -mx=9 -mfb=273 -md=4g -mmt=3 -ms=16777215t -mqs=
 
 
 
-Exctract Test1 - extract single files from .tar.7zip-repack
+Exctract Test1 - extract single files from .tar.7z - via TAR
 
 ```
 export INARCHNAME="out_test1.tar.7z"
-7z x out_test1.tar.7z -so | tar -xvv 3.txt
+7z x $INARCHNAME -so | tar -xvv 3.txt
+```
+
+Exctract Test2 - extract single files from .tar.7z - via 7z
+
+```
+export INARCHNAME="out_test1.tar.7z"
+7z x $INARCHNAME -so | 7z x -aoa -si -ttar 2.txt
 ```
