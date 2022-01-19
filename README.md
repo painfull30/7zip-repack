@@ -1,6 +1,6 @@
 "# 7zip-repack" 
 
-Test1 - pipe-based APPEND to solid .tar.7z archive
+Test1 - pipe-based repack to APPEND file to solid .tar.7z archive
 
 ```
 export INARCHNAME="test1in.tar.7z"
