@@ -15,11 +15,10 @@ Test1 - pipe-based repack to APPEND file to solid .tar.7z archive
 	Windows
 	
 		```
-		set INARCHNAME="test1in.tar.7z"
-		set ARCPARAMS="-t7z" "-m0=lzma2" "-mx=9" "-mfb=273" "-md=4g" "-mmt=3" "-ms=16777215t" "-mqs=on" "-slp"
-
-
-		("c:\Program Files\7-Zip\7z.exe" x %INARCHNAME% -so | "c:\cygwin64\bin\head" -c -512 && tar -C src -cf - 4.txt | "c:\cygwin64\bin\cat") | "c:\Program Files\7-Zip\7z.exe" a -si %ARCPARAMS% out_test1.tar.7z
+		Use append_win.cmd
+		
+		Known issues
+		- if new file have same name with existing one - will store 2 files together
 		```
 
 
